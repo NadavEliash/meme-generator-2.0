@@ -1,0 +1,110 @@
+.main-header {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    
+    margin-bottom: 5px;
+    padding: 15px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background: rgb(83, 228, 140);
+    background: linear-gradient(90deg, rgba(83, 228, 140, 1) 0%, rgba(19, 188, 222, 1) 100%);
+    caret-color: transparent;
+}
+
+.logo {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 2rem;
+    font-style: oblique;
+}
+
+
+.nav-bar {
+    flex-direction: column;
+}
+
+.hamburger {
+    position: relative;
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 1rem;
+    background-color: rgb(255, 255, 255);
+    font-family: Impact;
+    font-weight: 700;
+    color: rgb(84, 226, 141);
+    text-align: center;
+}
+
+.hamburger span {
+    position: relative;
+    top: 0.6rem;
+    opacity: 1;
+}
+
+.hamburger.clicked span{
+    opacity: 0;
+}
+
+.hamburger::before {
+    position: absolute;
+    top: 0.1rem;
+    left: 0.7rem;
+    content: '—';
+}
+
+.hamburger.clicked::before {
+    top: 0.6rem;
+    left: 0.8rem;
+    rotate: 45deg;
+    transition: 0.4s;
+}
+
+.hamburger::after {
+    position: absolute;
+    top: 1.1rem;
+    left: 0.7rem;
+    content: '—';    
+}
+
+.hamburger.clicked::after {
+    top: 0.6rem;
+    left: 0.7rem;
+    rotate: -45deg;
+    transition: 0.4s;
+}
+
+.nav-bar ul {
+    position: absolute;
+    right: 0;
+    top: 2.25rem;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    max-height: 0;
+    overflow: hidden;
+    font-family: 'Trebuchet MS';
+    font-weight: 700;
+    font-size: 2rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+.nav-bar .show {
+    max-height: 100vh;
+    transition: 1s;
+}
+
+.nav-bar li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+    width: 100vw;
+    height: 6rem;
+    border-bottom: solid 1px #615f5f;
+    background-color: #70c5a3;
+    opacity: 0.9;
+}

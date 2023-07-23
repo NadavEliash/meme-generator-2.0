@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ultimate Meme Generator</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="main-layout" onload="onInit()">
+
+    <header class="main-header">
+        <div class="logo">MEME GENERATOR</div>
+        <nav class="nav-bar">
+            <div class="hamburger" onclick="toggleBurger()"><span>----</span></div>
+            <ul class="nav-list">
+                <li class="btn btn-gallery" onclick="showGallery()">Gallery</li>
+                <li class="btn btn-memes" onclick="showSavedMemes()">Memes</li>
+                <li class="btn btn-about" onclick="showAbout()">About</li>
+            </ul>
+            <!-- <button class="btn btn-gallery" onclick="showGallery()">Gallery</button>
+            <button class="btn btn-memes" onclick="showSavedMemes()">Memes</button>
+            <button class="btn btn-about" onclick="showAbout()">About</button> -->
+        </nav>
+    </header>
+
+    <main class="main main-gallery">
+        <header class="header-gallery">
+            <input class="search-box" type="search" placeholder="search">
+            <div class="tags-container"></div>
+            <button class="btn btn-flexible" onclick="onFlexible()">I'm flexible!</button>
+        </header>
+
+        <section class="gallery-container">
+        </section>
+    </main>
+
+    <main class="main main-meme-editor" hidden>
+        <div class="meme-editor-container">
+            <div class="canvas-copy">
+                <div class="border-line-box" hidden>
+                    <input class="border-line-box-input" type="text">
+                    <img src="svg/drag.svg" alt="">
+                </div>
+            </div>
+            <canvas id="canvas" width="500" height="500"></canvas>
+            <div class="meme-editor">
+                <div class="text-full-edit-box">
+                    <section class="line-editor">
+                        <input class="txt-box" type="text" placeholder="Your line here"
+                            onkeypress="handleInputKeyEvent(event)">
+                        <article class="line-btns">
+                            <!-- <button class="btn btn-line-pose" onclick="onLinePose(-1)">🔻</button>
+                            <button class="btn btn-line-pose" onclick="onLinePose(1)">🔻</button> -->
+                            <button class="btn line-selector" onclick="onToggleLine()"><img src="svg/switch.svg"
+                                    alt=""></button>
+                            <button class="btn btn-add-line" onclick="onAddNewLine()">+</button>
+                            <button class="btn btn-clear" onclick="onDeleteLine()"><img src="svg/trash.svg"
+                                    alt=""></button>
+                        </article>
+                    </section>
+                    <section class="text-editor">
+
+                        <div class="font-container"><select class="btn font-select" name="" id=""
+                                onchange="onSelectFont(value)">
+                                <option value="impact">Impact</option>
+                                <option value="arial">Arial</option>
+                                <option value="Franklin Gothic Medium">Franklin</option>
+                            </select>
+                        </div>
+                        <div class="color-stroke-container">
+                            <button class="btn btn-font-size" onclick="onFontSize(1)">A+</button>
+                            <button class="btn btn-font-size" onclick="onFontSize(-1)">A-</button>
+                            <button class="btn btn-color"><input class="color-picker" type="color" value="#FFFFFF">
+                                <img class="img-color" src="img/color-palette.png" alt=""></button>
+                            <button class="btn btn-stroke" onclick="onToggleStroke()">s</button>
+                        </div>
+                    </section>
+                    <div class="sticker-container"></div>
+                </div>
+                <section class="share-bar">
+                    <button class="btn btn-save" onclick="saveImg()"><img src="svg/save.svg" alt="">SAVE</button>
+                    <a href="#" class="btn btn-download" onclick="downloadImg(this)"
+                        download="My-Hilarious-Meme.jpg"><img src="svg/download.svg" alt="">DOWNLOAD</a>
+                    <button class="btn btn-share" onclick="onUploadImg()"><img src="svg/share.svg" alt="">SHARE</button>
+                </section>
+
+            </div>
+        </div>
+    </main>
+
+    <main class="main main-meme-gallery" hidden>
+        <section class="meme-gallery-container">
+        </section>
+        <div class="modal img-modal hide">
+            <button class="close-modal" onclick="closeModal()">X</button>
+            <a href="#" class="btn btn-download" onclick="downloadModalImg(this)"
+                download="My-Hilarious-Meme.jpg">DOWNLOAD</a>
+            <button class="btn btn-edit" onclick="editModalImg()">EDIT</button>
+            <!-- <button class="btn btn-delete-img" onclick="deleteModalImg()">DELETE</button> -->
+        </div>
+    </main>
+
+    <main class="main main-about" hidden>
+        <div class="about-container">
+            <img src="img/My-Hilarious-Meme.jpg" alt="">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo, temporibus explicabo quaerat ad
+                exercitationem unde cupiditate veritatis corporis? Deserunt nihil architecto veritatis hic sunt
+                inventore
+                aspernatur doloribus ut ullam saepe. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloribus
+                optio harum a quas corporis fugit ratione in praesentium molestias numquam. Animi molestiae deleniti
+                explicabo. Laudantium nesciunt aperiam omnis molestias impedit!</p>
+        </div>
+    </main>
+
+    <footer class="main-footer">
+        <p>Created by Nadav Eliash 04/2023</p>
+    </footer>
+    <script src="js/util.js"></script>
+    <script src="js/gallery-service.js"></script>
+    <script src="js/meme-editor-service.js"></script>
+    <script src="js/meme-gallery-service.js"></script>
+    <script src="js/main-controller.js"></script>
+    <script src="js/gallery-controller.js"></script>
+    <script src="js/meme-editor-controller.js"></script>
+    <script src="js/canvas-controller.js"></script>
+    <script src="js/meme-gallery-controller.js"></script>
+    <script src="js/about-controller.js"></script>
+</body>
+
+</html>

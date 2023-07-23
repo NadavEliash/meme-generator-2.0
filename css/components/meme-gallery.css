@@ -1,0 +1,88 @@
+.meme-gallery-container {
+    padding: 0.5rem;
+    column-count: 4;
+    column-width: 10rem;
+    column-gap: 1rem;
+}
+
+.meme-gallery-container img {
+    aspect-ratio: auto;
+    height: auto;
+}
+
+.meme-gallery-container img:hover {
+    box-shadow: 4px 8px 18px 0px rgba(0, 0, 0, 0.66);
+    scale: 1;
+    opacity: 1;
+}
+.img-modal {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    left: 50vw;
+    top: 100px;
+    translate: -50%;
+    width: 180px;
+    height: 150px;
+    background-color: white;
+    border-radius: 20px;
+    opacity: 0.9;
+}
+
+.img-modal .btn {
+    width: 100px;
+    text-decoration: none;
+    color: white;
+    background-color: rgb(62, 189, 130);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 1rem;
+    border: 0;
+    border-radius: 30px;
+    margin-block: 10px;
+    padding: 5px;
+}
+
+.img-modal.hide {
+    display: none;
+}
+
+.img-modal .close-modal {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    border-radius: 5px;
+}
+
+.meme-img-container {
+    position: relative;
+
+}
+
+.btn-saved-download {
+    position: absolute;
+    left: 45%;
+    width: 15%;
+    height: 15%;
+    bottom: 45%;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 1rem;
+}
+
+.btn-saved-download:hover {
+    background-color: rgba(255, 255, 255, 1);
+    left: 44%;
+    width: 17%;
+    height: 17%;
+    transition: 0.6s;
+}
+
+.btn-saved-download img {
+    translate: 0 30%;
+    width: 70%;
+}
+
+.btn-saved-download img:hover {
+    box-shadow: none;
+}

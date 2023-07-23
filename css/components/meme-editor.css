@@ -1,0 +1,252 @@
+.meme-editor {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-items: center;
+    background-color: rgb(66, 65, 65);
+    border-radius: 30px;
+    margin-top: 20px;
+}
+
+.meme-editor .btn {
+    box-shadow: 0px -4px 1px 0px rgba(0, 0, 0, 0.43) inset;
+    border: 0;
+    border-radius: 15px;
+    padding: 8px;
+}
+
+.meme-editor .btn:hover {
+    scale: 1.1;
+    transition: 0.4s;
+}
+
+.text-full-edit-box {
+    padding: 10px;
+    max-width: 100%;
+}
+
+.line-editor {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.txt-box {
+    border: 0;
+    font-size: 1.5rem;
+    height: 3rem;
+    width: 20rem;
+    border-radius: 2rem;
+    margin-block: 5px;
+    background-color: rgb(230, 230, 230);
+    box-shadow: 1px -14px 5px -10px rgb(139, 139, 139) inset;
+    caret-color: rgb(0, 0, 0);
+    text-align: center;
+    max-width: 100%;
+}
+
+.txt-box::placeholder {
+    color: rgb(124, 124, 124);
+}
+
+.line-btns {
+    margin-block: 10px;
+    margin-inline: 15px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    justify-items: center;
+}
+
+.line-btns .btn {
+    width: 50px;
+    height: 50px;
+}
+
+.line-selector.btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    background: rgba(19, 188, 222, 1);
+    color: white;
+    text-shadow: -1px 2px 4px rgba(0, 0, 0, 0.6);
+    width: 50px;
+}
+
+.line-selector.btn img {
+    width: 30px;
+    filter: invert(1);
+    rotate: 90deg;
+}
+
+.btn-clear {
+    background-color: red;
+}
+
+.btn-clear img {
+    width: 15px;
+    filter: invert(1);
+}
+
+.btn-add-line {
+    background-color: rgb(68, 206, 68);
+    color: white;
+    font-size: 2rem;
+    font-weight: 600;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    line-height: 1rem;
+}
+
+.btn-line-pose {
+    background-color: rgb(202, 158, 243);
+    font-size: large;
+}
+
+.btn-line-pose:first-child {
+    box-shadow: 0px 4px 1px 0px rgba(0, 0, 0, 0.43) inset;
+    rotate: 180deg;
+}
+
+
+.text-editor {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    background: linear-gradient(90deg, rgb(69, 228, 193) 0%, rgba(19, 188, 222, 1) 100%);
+    border-radius: 1rem;
+    margin-block: 10px;
+}
+
+.font-container {
+    display: flex;
+    flex-direction: row;
+}
+
+
+.color-stroke-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.text-editor .btn {
+    width: 45px;
+    height: 45px;
+    margin: 5px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 700;
+    font-size: large;
+}
+
+.btn.font-select {
+    width: 140px;
+    flex: 1;
+}
+
+.btn.font-select:hover {
+    scale: 1;
+}
+
+.btn-color {
+    overflow: hidden;
+}
+
+.color-picker {
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    width: 60px;
+    padding: 4px;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.img-color {
+    position: absolute;
+    width: 35px;
+    translate: -50% -90%;
+    pointer-events: none;
+}
+
+.btn.btn-stroke {
+    display: flex;
+    align-items: end;
+    justify-content: center;
+    font-weight: 600;
+    font-size: 1.5rem;
+    line-height: 1.5;
+}
+
+.sticker-container {
+    display: none;
+    flex-direction: row;
+    justify-content: space-around;
+    background-color: rgba(255, 255, 255, 0.4);
+    padding: 2px;
+    border-radius: 2rem;
+    margin-block: 20px;
+    height: 60px;
+}
+
+.btn-sticker {
+    width: 3rem;
+}
+
+.drag-sticker {
+    background-color: transparent;
+    border: 0;
+    font-size: large;
+}
+
+
+.share-bar {
+    display: flex;
+    flex-direction: row;
+    width: 20rem;
+    height: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    flex: 1;
+}
+
+.share-bar .btn {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    width: 20rem;
+    flex: 1;
+    padding: 5px;
+    padding-inline: 10px;
+    margin-inline: 5px;
+    margin-block-end: 10px;
+    text-decoration: none;
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 0.8rem;
+    border-radius: 8rem;
+}
+
+.share-bar .btn img {
+    width: 20px;
+    margin-inline-end: auto;
+    filter: invert(1);
+
+}
+
+.btn.btn-save {
+    display: flex;
+    padding: 7px;
+    background-color: rgb(207, 50, 168);
+    width: 5rem;
+}
+
+.btn.btn-download {
+    background-color: rgb(125, 14, 189);
+}
+
+.btn.btn-share {
+    background-color: rgb(43, 117, 255);
+    width: 5rem;
+}

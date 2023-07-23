@@ -1,0 +1,14 @@
+.main-about img {
+    border-radius: 1rem;
+    margin-block-end: 10px;
+    box-shadow: 8px 6px 5px -3px rgba(0,0,0,0.42);
+}
+
+.main-about p {
+    padding: 5px;
+    color: white;
+    background-color: rgb(66, 66, 66);
+    border: solid 10px rgb(66, 66, 66);
+    border-radius: 1rem;
+    line-height: 1.5;
+}
